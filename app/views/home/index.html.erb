@@ -1,0 +1,38 @@
+<h1>中資投資台灣企業名單</h1>
+<p>施工中</p>
+
+<table>
+	  <thead>
+	    <tr>
+	      <th><%= params[:direction] == 'desc' ? "<a href='/?sort=year_date&direction=asc'>核准年月</a>".html_safe : 
+	      "<a href='/?sort=year_date&direction=desc'>核准年月</a>".html_safe %></th> 
+	      <th>陸資投資人名稱 </th>
+	      <th><%= params[:direction] == 'desc' ? "<a href='/?sort=invest_type&direction=asc'>投資型態</a>".html_safe : 
+	      "<a href='/?sort=invest_type&direction=desc'>投資型態</a>".html_safe %> </th>
+	   	  <th>國內被投資事業名稱 </th>
+	   	  <th><%= params[:direction] == 'desc' ? "<a href='/?sort=amount&direction=asc'>投資金額(新台幣)</a>".html_safe : 
+	   	  "<a href='/?sort=amount&direction=desc'>投資金額(新台幣)</a>".html_safe %> </th>
+	   	  <th>行業分類 </th>
+	   	  <th>備註 </th>
+	   
+	      <th colspan="3"></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+
+	<% @investors.each do |investor| %>
+	<tr>
+	 <td> <%= investor.year_date %>  </td>
+	 <td> <%= investor.name %> </td>
+	 <td> <%= investor.invest_type %> </td>
+		<td> <%= investor.invested_name %> </td>
+		<td> <%= investor.amount * 1000 %> </td>
+		<td> <%= investor.industry %> </td>
+		<td> <%= investor.note %> </td>
+
+	 
+	      </tr>
+	 <% end %>
+	  </tbody>
+</table>
