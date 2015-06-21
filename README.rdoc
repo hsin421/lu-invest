@@ -1,28 +1,12 @@
-== README
+== 中資投資台灣企業名單
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails
 
-Things you may want to cover:
+To build
 
-* Ruby version
+1. git clone
 
-* System dependencies
+2. bundle install & rake db:migrate
 
-* Configuration
+3. ** Pending script to inject Lu_invest.csv into database
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
